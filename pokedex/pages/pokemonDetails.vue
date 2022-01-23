@@ -8,7 +8,7 @@
         </div>
       </div>
 
-      <div class="row imgContainer centerElements">
+      <div class="imgContainer centerElements">
         <img :src="pokemonSprite" alt="pk_img">
       </div>
       <div class="row centerElements">
@@ -42,13 +42,28 @@
   border-radius: 15px;
   background-color: aliceblue;
   position: relative;
+  border: 1px solid #f8b500;
 }
 
+@media screen and (min-width: 768px) {
 .pokemonCard .imgContainer {
-  height: 70%;
-  position: absolute;
-  left: 10%;
-  z-index: 10;
+    height: 70%;
+    position: absolute;
+    left: 10%;
+    z-index: 10;
+  }
+}
+
+@media screen and (max-width: 769px) {
+  .pokemonCard {
+    width: 100vw;
+    height: 90vh;
+    border: 1px solid #f8b500;
+  }
+  .imgContainer img {
+    max-width: 80%;
+    margin-top: 20%
+  }
 }
 
 .pokemonCard label {
