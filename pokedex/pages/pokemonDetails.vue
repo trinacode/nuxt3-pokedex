@@ -58,7 +58,6 @@
   .pokemonCard {
     width: 100vw;
     height: 90vh;
-    border: 1px solid #f8b500;
   }
   .imgContainer img {
     max-width: 80%;

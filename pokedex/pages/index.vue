@@ -131,7 +131,6 @@ addPokemonIdAndSpriteUrl()
 .pokemonCardLabel {
   color: #E684AE;
   font-family: "Andale Mono", sans-serif;
-  font-size: 22px;
   text-transform: capitalize;
   position: absolute;
   bottom: 0;
@@ -142,6 +141,7 @@ addPokemonIdAndSpriteUrl()
   background: linear-gradient(to top, #f8b500, #f0f8ff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   border-bottom-left-radius: 15px 15px;
   border-bottom-right-radius: 15px 15px;
+  font-size: 22px;
 }
 
 .addPokemonToTeamButton {
@@ -210,6 +210,51 @@ addPokemonIdAndSpriteUrl()
   top: -10px;
   font-size: 20px;
   color: white;
+}
+
+@media screen and (max-width: 769px) {
+  .pokemonCard {
+    width: 110px;
+    height: 120px;
+  }
+  .pokemonGrid {
+    padding: 10px;
+    grid-template-columns: repeat(auto-fill, 110px);
+    grid-gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+  }
+  .pokemonCardLabel {
+    font-size: 18px;
+  }
+  .team {
+    height: 180px;
+    width: 95vw;
+    left: 5vw;
+    border-top-right-radius: 15px 15px;
+    border-top-left-radius: 15px 15px;
+  }
+  .team .slot {
+    display: grid;
+    margin-inline: 2px;
+    border: 1px solid dimgrey;
+    height: 130px;
+    width: 100px;
+    border-radius: 15px;
+  }
+  .pokemonTeamCard {
+    width: 75px;
+    height: 130px;
+    border-radius: 15px;
+    background-color: aliceblue;
+    position: relative;
+  }
+  .pokemonTeamButton {
+    bottom: 20px;
+    left: 20px;
+    height: 80px;
+    width: 80px;
+    border-radius: 50px;
+  }
 }
 
 </style>
