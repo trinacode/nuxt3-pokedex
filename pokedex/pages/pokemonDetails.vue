@@ -1,20 +1,18 @@
 <template>
   <div class="row centerElements">
-    <div class=" pokemonCard">
-      <div class="card pokemonCard">
-        <div class="abilities">
-          <h2>Abilities</h2>
-          <div v-for="ability in abilities" class="ability">
-            -{{ ability.ability.name }}
-          </div>
+    <div class="pokemonCard">
+      <div class="abilities">
+        <h2>Abilities</h2>
+        <div v-for="ability in abilities" class="ability">
+          -{{ ability.ability.name }}
         </div>
+      </div>
 
-        <div class="row imgContainer centerElements">
-          <img :src="pokemonSprite" alt="pk_img">
-        </div>
-        <div class="row centerElements">
-          <label class="centerElements">{{ pokemonName }}</label>
-        </div>
+      <div class="row imgContainer centerElements">
+        <img :src="pokemonSprite" alt="pk_img">
+      </div>
+      <div class="row centerElements">
+        <label class="centerElements">{{ pokemonName }}</label>
       </div>
     </div>
   </div>
@@ -60,7 +58,7 @@
   text-transform: capitalize;
   position: absolute;
   bottom: 0;
-  height: 30%;
+  height: 20%;
   width: 100%;
   background: #f0f8ff;  /* fallback for old browsers */
   background: -webkit-linear-gradient(to top, #f8b500, #f0f8ff);  /* Chrome 10-25, Safari 5.1-6 */
