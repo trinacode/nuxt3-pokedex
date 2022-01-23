@@ -15,16 +15,15 @@
     </div>
 
     <div class="pokemonGrid centerElements">
-      <div v-for="(pokemon) in pokemonsList" :key="pokemon.name" class="card pokemonCard">
-        <a :href="pokemon.url">
+      <div v-for="pokemon in pokemonsList" :key="pokemon.name" class="card pokemonCard">
+        <router-link :to="`/pokemonDetails?name=${pokemon.name}&id=${pokemon.id}`">
           <div class="row imgContainer centerElements">
             <img :src="pokemon.spriteUrl" alt="pk_img">
           </div>
-        </a>
-        <div class="row centerElements">
-          <label class="centerElements">{{ pokemon.name }}</label>
-        </div>
-        <div></div>
+          <div class="row centerElements">
+            <label class="centerElements">{{ pokemon.name }}</label>
+          </div>
+        </router-link>
       </div>
     </div>
   </div>
